@@ -67,12 +67,27 @@ const up = document.querySelector('.btn.up');
 down.addEventListener("click", function(){
     //se "Active" è minore della lungezza -1 dell'arrai di classi...
     if ( Active < item.length -1){
-        //seleziona la classe con l'active 
+        //seleziona la classe con l'active e la rimuove 
         item[Active].classList.remove('active');
         object[Active].classList.remove('active-object');
         //incrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe seguente
         Active++;
         //con l'indice incrementa ora la classe selezionata è la seguente e si può così aggiungere nuovamente la classe active
+        item[Active].classList.add('active');
+        object[Active].classList.add('active-object');
+    }
+});
+
+//tramite la variabile "up", al click del plsante verra scatenata la funzione
+up.addEventListener("click", function(){
+    //se "Active" è maggiore di 0...
+    if ( Active > 0){
+        //seleziona la classe con l'active e la rimuove 
+        item[Active].classList.remove('active');
+        object[Active].classList.remove('active-object');
+        //decrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe precedente
+        Active--;
+        //con l'indice decrementato ora la classe selezionata è la precedente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
         object[Active].classList.add('active-object');
     }
