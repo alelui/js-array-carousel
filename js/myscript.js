@@ -8,13 +8,13 @@ const itemsArrey = [
     'img/05.jpg'
 ];
 
-// const titleArrey = [
-//     'Svezia',
-//     'Svizzera',
-//     'Gran Bretagna',
-//     'Germania',
-//     'Paradise'
-// ]
+const titleArrey = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+];
 
 // const textArrey = [
 //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -22,13 +22,14 @@ const itemsArrey = [
 //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
 //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 //     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-// ]
+// ];
 
 
 
 
 //diciaro la variabile che utilizzerò nel ciclo
 let items ='';
+let texts ='';
 //inizializzo il ciclo per inserire le immagini dinamicamente
 for (let i = 0; i < itemsArrey.length; i++){
 
@@ -37,18 +38,27 @@ for (let i = 0; i < itemsArrey.length; i++){
             <img src="${itemsArrey[i]}" alt="">
         </div>
     ` 
+
+    texts += `
+    <div class="textInterno">          
+        <h2>${titleArrey[i]}</h2>
+    </div>
+`
 }
 //Visualizzo il risultato
-// console.log(items);
+console.log(texts);
 
 //Seleziono la destinazione dove andare a scrivere il risultato
 const colSx = document.querySelector('.col-sx');
+const colSxText = document.querySelector('.text');
 // scrivo il risultato
 colSx.innerHTML = items;
+colSxText.innerHTML = texts;
 
 //selezione la classe a cui devo aggingere la active creando un array di classi
 const item = document.getElementsByClassName('col-sx-img-box');
 const object = document.getElementsByClassName('object');
+const text = document.getElementsByClassName('text');
 console.log(object);
 
 //inizializo la variabile e la pongo uguale a 0 in modo da potere indiziare l'arrei di classi sopra creato
