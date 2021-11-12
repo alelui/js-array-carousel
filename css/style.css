@@ -34,13 +34,14 @@
 }
 #slider .col-dx{
     width: 200px;
-    background-color: cornflowerblue;
+    background-color: black;
 }
 
 .col-dx .object{
     width: 100%;
     height: calc( 100% / 5);
     border: 1px solid black;
+    opacity: 0.5;
 }
 
 img{
@@ -78,15 +79,11 @@ transform: translateX(-50%);
     background-color: lightblue;
     font-size: 30px;
 }
-.up{
+.btn.up{
     top: 5px;
 }
-.down{
+.btn.down{
     bottom: 5px;
-}
-
-.text span{
-    opacity: 0.7;
 }
 
 .text{
@@ -97,3 +94,8 @@ transform: translateX(-50%);
     color: white;
     width: 40%;
 }
+.text span{
+    opacity: 0.7;
+}
+
+
