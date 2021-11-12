@@ -28,10 +28,15 @@
 #slider .col-dx{
     height: 100%;
 }
-#slider .col-sx{
+.col-sx{
     width: 100%;
     background-color: coral;
 }
+.col-sx-img-box{
+    height: 100%;
+    display: none;
+}
+
 #slider .col-dx{
     width: 200px;
     background-color: black;
@@ -98,4 +103,6 @@ transform: translateX(-50%);
     opacity: 0.7;
 }
 
-
+.active{
+    display: block;
+}
