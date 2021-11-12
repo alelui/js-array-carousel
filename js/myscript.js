@@ -16,13 +16,13 @@ const titleArrey = [
     'Paradise'
 ];
 
-// const textArrey = [
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-//     'Lorem ipsum',
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-//     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-// ];
+const textArrey = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+];
 
 
 
@@ -42,11 +42,12 @@ for (let i = 0; i < itemsArrey.length; i++){
     texts += `
     <div class="textInterno">          
         <h2>${titleArrey[i]}</h2>
+        <span>${textArrey[i]}</span>
     </div>
 `
 }
 //Visualizzo il risultato
-console.log(texts);
+// console.log(texts);
 
 //Seleziono la destinazione dove andare a scrivere il risultato
 const colSx = document.querySelector('.col-sx');
@@ -58,8 +59,8 @@ colSxText.innerHTML = texts;
 //selezione la classe a cui devo aggingere la active creando un array di classi
 const item = document.getElementsByClassName('col-sx-img-box');
 const object = document.getElementsByClassName('object');
-const text = document.getElementsByClassName('text');
-console.log(object);
+const text = document.getElementsByClassName('textInterno');
+console.log(text);
 
 //inizializo la variabile e la pongo uguale a 0 in modo da potere indiziare l'arrei di classi sopra creato
 let Active = 0
