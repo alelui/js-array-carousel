@@ -46,7 +46,7 @@
     width: 100%;
     height: calc( 100% / 5);
     border: 1px solid black;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 img{
@@ -67,8 +67,8 @@ transform: translateX(-50%);
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: lightblue;
-    opacity: 0.6;
+    background-color: white;
+    opacity: 0.2;
 }
 
 .btn{
@@ -83,6 +83,7 @@ transform: translateX(-50%);
     border-radius: 50%;
     background-color: lightblue;
     font-size: 30px;
+    cursor: pointer;
 }
 .btn.up{
     top: 5px;

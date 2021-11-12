@@ -69,11 +69,12 @@ down.addEventListener("click", function(){
     if ( Active < item.length -1){
         //seleziona la classe con l'active 
         item[Active].classList.remove('active');
-        // circle[Active].classList.remove('active-cirle');
+        object[Active].classList.remove('active-object');
         //incrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe seguente
         Active++;
         //con l'indice incrementa ora la classe selezionata è la seguente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
+        object[Active].classList.add('active-object');
     }
 });
 
