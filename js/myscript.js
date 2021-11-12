@@ -39,7 +39,7 @@ for (let i = 0; i < itemsArrey.length; i++){
     ` 
 }
 //Visualizzo il risultato
-console.log(items);
+// console.log(items);
 
 //Seleziono la destinazione dove andare a scrivere il risultato
 const colSx = document.querySelector('.col-sx');
@@ -48,13 +48,32 @@ colSx.innerHTML = items;
 
 //selezione la classe a cui devo aggingere la active creando un array di classi
 const item = document.getElementsByClassName('col-sx-img-box');
-console.log(item[0]);
+console.log(item);
 
 //inizializo la variabile e la pongo uguale a 0 in modo da potere indiziare l'arrei di classi sopra creato
 let itemActive = 0
 //assegno la classe active al primo elemto dell'array di classi rendendo visibile l'immagine all'inteno della prima classe
 item[itemActive].classList.add('active');
 
+//seleziono le frecce su e giu
+const down = document.querySelector('.btn.down');
+const up = document.querySelector('.btn.up');
+const circle = document.querySelector('.circle');
+console.log(circle);
+
+
+//tramite la variabile "down", al click del plsante verra scatenata la funzione
+down.addEventListener("click", function(){
+    //se "itemActive" è minore della lungezza -1 dell'arrai di classi...
+    if ( itemActive < item.length -1){
+        //seleziona la classe con l'active 
+        item[itemActive].classList.remove('active');
+        //incrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe seguente
+        itemActive++;
+        //con l'indice incrementa ora la classe selezionata è la seguente e si può così aggiungere nuovamente la classe active
+        item[itemActive].classList.add('active');
+    }
+});
 
 
 
