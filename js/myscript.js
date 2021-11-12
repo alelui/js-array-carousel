@@ -24,8 +24,12 @@ const itemsArrey = [
 //     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 // ]
 
-let items ='';
 
+
+
+//diciaro la variabile che utilizzerò nel ciclo
+let items ='';
+//inizializzo il ciclo per inserire le immagini dinamicamente
 for (let i = 0; i < itemsArrey.length; i++){
 
     items += `
@@ -34,11 +38,26 @@ for (let i = 0; i < itemsArrey.length; i++){
         </div>
     ` 
 }
-
+//Visualizzo il risultato
 console.log(items);
 
+//Seleziono la destinazione dove andare a scrivere il risultato
 const colSx = document.querySelector('.col-sx');
-
+// scrivo il risultato
 colSx.innerHTML = items;
+
+//selezione la classe a cui devo aggingere la active creando un array di classi
+const item = document.getElementsByClassName('col-sx-img-box');
+console.log(item[0]);
+
+//inizializo la variabile e la pongo uguale a 0 in modo da potere indiziare l'arrei di classi sopra creato
+let itemActive = 0
+//assegno la classe active al primo elemto dell'array di classi rendendo visibile l'immagine all'inteno della prima classe
+item[itemActive].classList.add('active');
+
+
+
+
+
 
 
