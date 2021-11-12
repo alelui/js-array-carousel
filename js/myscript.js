@@ -68,6 +68,7 @@ let Active = 0
 //assegno la classe active al primo elemto dell'array di classi rendendo visibile l'immagine all'inteno della prima classe
 item[Active].classList.add('active');
 object[Active].classList.add('active-object');
+text[Active].classList.add('active');
 
 //seleziono le frecce su e giu
 const down = document.querySelector('.btn.down');
@@ -81,11 +82,13 @@ down.addEventListener("click", function(){
         //seleziona la classe con l'active e la rimuove 
         item[Active].classList.remove('active');
         object[Active].classList.remove('active-object');
+        text[Active].classList.remove('active');
         //incrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe seguente
         Active++;
         //con l'indice incrementa ora la classe selezionata è la seguente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
         object[Active].classList.add('active-object');
+        text[Active].classList.add('active');
     }
 });
 
@@ -96,11 +99,13 @@ up.addEventListener("click", function(){
         //seleziona la classe con l'active e la rimuove 
         item[Active].classList.remove('active');
         object[Active].classList.remove('active-object');
+        text[Active].classList.remove('active');
         //decrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe precedente
         Active--;
         //con l'indice decrementato ora la classe selezionata è la precedente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
         object[Active].classList.add('active-object');
+        text[Active].classList.add('active');
     }
 });
 
