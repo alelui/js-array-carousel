@@ -42,11 +42,11 @@
     background-color: black;
 }
 
-.col-dx .object{
+.object{
     width: 100%;
     height: calc( 100% / 5);
     border: 1px solid black;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 img{
@@ -105,4 +105,8 @@ transform: translateX(-50%);
 
 .active{
     display: block;
+}
+.active-object{
+    opacity: 1;
+    border: 1px solid white;
 }
