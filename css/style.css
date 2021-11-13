@@ -116,6 +116,6 @@ transform: translateX(-50%);
     border: 1px solid white;
 }
 .active-circle{
-    opacity: 1;
-    background-color: yellow;
+    opacity: 0.4;
+    background-color: black;   
 }
