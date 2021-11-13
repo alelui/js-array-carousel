@@ -35,7 +35,7 @@ for (let i = 0; i < itemsArrey.length; i++){
 
     items += `
         <div class="col-sx-img-box">          
-            <img src="${itemsArrey[i]}" alt="">
+            <img src="${itemsArrey[i]}" alt="${titleArrey[i]}">
         </div>
     ` 
 
@@ -60,7 +60,8 @@ colSxText.innerHTML = texts;
 const item = document.getElementsByClassName('col-sx-img-box');
 const object = document.getElementsByClassName('object');
 const text = document.getElementsByClassName('textInterno');
-console.log(text);
+const circle = document.getElementsByClassName('circle');
+console.log(circle);
 
 //inizializo la variabile e la pongo uguale a 0 in modo da potere indiziare l'arrei di classi sopra creato
 let Active = 0
@@ -69,6 +70,7 @@ let Active = 0
 item[Active].classList.add('active');
 object[Active].classList.add('active-object');
 text[Active].classList.add('active');
+circle[Active].classList.add('active-circle');
 
 //seleziono le frecce su e giu
 const down = document.querySelector('.btn.down');
@@ -83,12 +85,14 @@ down.addEventListener("click", function(){
         item[Active].classList.remove('active');
         object[Active].classList.remove('active-object');
         text[Active].classList.remove('active');
+        circle[Active].classList.remove('active-circle');
         //incrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe seguente
         Active++;
         //con l'indice incrementa ora la classe selezionata è la seguente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
         object[Active].classList.add('active-object');
         text[Active].classList.add('active');
+        circle[Active].classList.add('active-circle');
     }
 });
 
@@ -100,12 +104,15 @@ up.addEventListener("click", function(){
         item[Active].classList.remove('active');
         object[Active].classList.remove('active-object');
         text[Active].classList.remove('active');
+        circle[Active].classList.remove('active-circle');
         //decrementa la variabille favendo spostare l'indice di 1 unità e cosi facendo passa alla classe precedente
         Active--;
         //con l'indice decrementato ora la classe selezionata è la precedente e si può così aggiungere nuovamente la classe active
         item[Active].classList.add('active');
         object[Active].classList.add('active-object');
         text[Active].classList.add('active');
+        circle[Active].classList.add('active-circle');
+
     }
 });
 
