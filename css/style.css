@@ -18,19 +18,16 @@
 }
 
 .container #slider{
-    height: 65%;
+    height: 75%;
     width: 70vw;
     background-color: burlywood;
     display: flex;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-#slider .col-sx,
-#slider .col-dx{
-    height: 100%;
-}
 .col-sx{
     width: 100%;
-    background-color: coral;
 }
 .col-sx-img-box{
     height: 100%;
@@ -96,7 +93,7 @@ transform: translateX(-50%);
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 15px;
+    padding: 70px;
     color: white;
     width: 40%;
 }
